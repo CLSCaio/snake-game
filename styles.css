@@ -1,0 +1,228 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: PixelArtFonts;
+    src: url('./fonts/Pixel.ttf'), url('./fonts/pixelart.ttf'), url('./fonts/pixelPaint.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background-color: black;
+    font: 400 20px PixelArtFonts;
+}
+
+p {
+    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: textGradient 10s backwards infinite;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 100vw;
+    align-items: center;
+    justify-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+
+    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: textGradient 10s backwards infinite;
+}
+
+h2 {
+    font-size: 2rem;
+
+    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: textGradient 10s backwards infinite;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 100px;
+}
+
+li {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    font-size: 2rem;
+    text-decoration: none;
+    
+    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: textGradient 10s backwards infinite;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes startGame {
+    0% {
+        transform: scale(0.5)
+    }
+
+    50% {
+        transform: scale(2)
+    }
+
+    100% {
+        transform: scale(0.5)
+    }
+}
+
+@keyframes divEspace {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes interrogacaoFrame {
+    0% {
+        transform: scale(1) rotateY(0);
+    }
+
+    50% {
+        transform: scale(1.4) rotateY(2500deg);
+    }
+
+    100% {
+        transform: scale(1) rotateY(0);
+    }
+}
+
+@keyframes textGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    
+    15% {
+      background-position: 25% 25%;
+    }
+  
+    30% {
+      background-position: 50% 50%;
+    }
+    
+    45% {
+      background-position: 100% 100%;
+    }
+  
+    60% {
+      background-position: 50% 50%;
+    }
+    
+    75% {
+      background-position: 25% 25%;
+    }
+    
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+#gameTitle {
+    cursor: pointer;
+    animation: startGame 3.5s forwards ease-in-out infinite;
+}
+
+.menuSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+    
+}
+
+.menuSelect div {
+    align-self: flex-end;
+    animation: divEspace 2s ease-in-out infinite;
+    cursor: pointer;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuSelect div p {
+    font-size: 1.4rem; 
+}
+
+.menuSelect div p:hover {
+    transition: 1s;
+    animation: interrogacaoFrame 10s forwards ease infinite;
+}
+
+.menuSelect span {
+    width: 100%;
+    height: 85px;
+    color: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    display: flex;
+    opacity: 0;
+    transition: 1s;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    padding: 15px;
+}
+
+canvas {
+    border: 5px double skyblue
+}
+
+#gameOver {
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0,0,0, .5);
+
+    position: absolute;
+}

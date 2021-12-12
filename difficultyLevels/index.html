@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>SNAKE GAME</title>
+</head>
+<body>
+    <header>
+        <h1> SNAKE GAME </h1>
+    </header>
+        
+   <main>     
+        <div>
+            <ul>
+               
+                <div class="menuSelect">
+                   
+                    <li> 
+                        <a href="./normal" >Normal </a>
+                        <div onClick="abrirModeInfo('modeInfo1')"> <p > ? </p> </div>
+                    </li>
+                    <span id="modeInfo1"> 
+                        Modo classico do famoso jogo snake, nesse modo voce morre apenas se bater no proprios corpo 
+                    </span>
+                </div>  
+                
+                <div class="menuSelect" > 
+                    <li> 
+                        <a href="./hardcore" >Hardcore</a>
+                        <div onClick="abrirModeInfo('modeInfo2')"> <p > ? </p> </div> 
+                    </li>
+                    <span id="modeInfo2"> 
+                        O modo Hardcore te mata ao bater nas paredes e no proprio corpo, o jogo também ja começa em uma
+                        velocidade maior, tome cuidado.
+                    </span>
+                </div>  
+                
+                <div class="menuSelect">
+                    
+                    <li> 
+                        <a href="./inverseMode" >Inverse Mode</a>
+                        <div onClick="abrirModeInfo('modeInfo3')"> <p > ? </p> </div>  
+                    </li>
+                    <span id="modeInfo3"> 
+                        O modo invertido é o modo louco do snake, mesma dificuldade do hardcore, porem fique esperto,
+                        a ordem dos botões para controlar a snake é aleatoria e muda constantemente
+                    </span>
+                </div>  
+                
+            </ul>
+        </div>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+</html>
