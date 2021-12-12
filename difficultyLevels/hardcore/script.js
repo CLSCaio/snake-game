@@ -32,8 +32,8 @@ window.onload = function(){
     let brownAppleY
     let brownAppleX
 
-    let px = Math.floor(Math.random() * qpX)
-    let py = Math.floor(Math.random() * qpY)
+    let px = 5
+    let py = 5
 
     let trail = []
     let tail = 3
