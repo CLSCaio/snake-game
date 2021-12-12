@@ -71,11 +71,10 @@ a {
     background-clip: text;
     -webkit-background-clip: text;
     animation: textGradient 10s backwards infinite;
-    
 }
 
 a:hover {
-    text-decoration: underline;
+    transform: scale(1.2);
 }
 
 #gameTitle {
@@ -186,11 +185,11 @@ canvas {
     }
 
     50% {
-        transform: scale(1.4) rotateY(2500deg);
+        transform: scale(2) rotateY(2500deg);
     }
 
     100% {
-        transform: scale(1) rotateY(0);
+        transform: scale(3) rotateY(0);
     }
 }
 
