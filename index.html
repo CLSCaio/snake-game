@@ -8,26 +8,24 @@
     <title>SNAKE GAME</title>
 </head>
 <body>
-    <header>
+    <header class="startTittle">
         <h1> SNAKE GAME </h1>
+        <div onClick="abrirModeInfo('regra')"> <p > ! </p> </div>
     </header>
-        
-   <main>
 
+   <main>
         <div id="gameTitle">
           <a href="./difficultyLevels"> <h2>  START GAME  </h2> </a>  
         </div>
-        
-          
-        <!-- <div id="menuSelect">
-            <ul>
-                <li> <a href="./difficultyLevels/normal">Normal</a>  </li>
-                <li> <a href="./difficultyLevels/hardcore">Hardcore</a> </li>
-                <li> <a href="./difficultyLevels/inverseMode">Inverse Mode</a> </li>
-            </ul>
-        </div> -->
+
+        <div id="regra" > 
+            <div> <p>  Apple </p><span class="apple "></span> </div>
+            <div><p> GoldApple </p><span class="goldApple "></span>  </div>
+            <div><p> PoisonApple </p><span class="poisonApple "></span>  </div>
+            <div><p> DeathApple </p><span class="deathApple "></span>  </div>
+        </div>
     </main>
 </body>
 
-<script src="./script.js"></script>
+<script src="./difficultyLevels/script.js"></script>
 </html>
