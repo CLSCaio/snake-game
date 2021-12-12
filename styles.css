@@ -185,11 +185,11 @@ canvas {
     }
 
     50% {
-        transform: scale(2) rotateY(2500deg);
+        transform: scale(3) rotateY(2500deg);
     }
 
     100% {
-        transform: scale(3) rotateY(0);
+        transform: scale(5) rotateY(0);
     }
 }
 
