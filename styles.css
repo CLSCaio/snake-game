@@ -16,15 +16,6 @@ html {
     font: 400 20px PixelArtFonts;
 }
 
-p {
-    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
-    background-size: 500% 500%;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: textGradient 10s backwards infinite;
-}
-
 body {
     width: 100vw;
     height: 100vh;
@@ -85,6 +76,80 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+#gameTitle {
+    cursor: pointer;
+    animation: startGame 3.5s forwards ease-in-out infinite;
+}
+
+.menuSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 300px;
+    
+}
+
+.menuSelect div {
+    align-self: flex-end;
+    animation: divEspace 2s ease-in-out infinite;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuSelect li div p{
+    background: linear-gradient(45deg, red, blue, yellow, green, skyblue);
+    background-size: 500% 500%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: textGradient 10s backwards infinite;
+
+    font-size: 1.4rem; 
+}
+
+.menuSelect li div p:hover {
+    transition: 1s;
+    animation: interrogacaoFrame 10s forwards ease infinite;
+}
+
+.menuSelect span {
+    width: 100%;
+    height: 85px;
+    color: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    display: flex;
+    opacity: 0;
+    transition: 1s;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    padding: 15px;
+}
+
+canvas {
+    border: 5px double skyblue
+}
+
+#gameOver {
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0,0,0, .5);
+
+    position: absolute;
 }
 
 @keyframes startGame {
@@ -157,72 +222,4 @@ a:hover {
     100% {
       background-position: 0% 0%;
     }
-  }
-
-#gameTitle {
-    cursor: pointer;
-    animation: startGame 3.5s forwards ease-in-out infinite;
-}
-
-.menuSelect {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 300px;
-    
-}
-
-.menuSelect div {
-    align-self: flex-end;
-    animation: divEspace 2s ease-in-out infinite;
-    cursor: pointer;
-    background-color: transparent;
-    height: 50px;
-    width: 50px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menuSelect div p {
-    font-size: 1.4rem; 
-}
-
-.menuSelect div p:hover {
-    transition: 1s;
-    animation: interrogacaoFrame 10s forwards ease infinite;
-}
-
-.menuSelect span {
-    width: 100%;
-    height: 85px;
-    color: skyblue;
-    border: 2px solid skyblue;
-    border-radius: 10px;
-    display: flex;
-    opacity: 0;
-    transition: 1s;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    padding: 15px;
-}
-
-canvas {
-    border: 5px double skyblue
-}
-
-#gameOver {
-    height: calc(100vh - 20px);
-    width: calc(100vw - 20px);
-
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    background-color: rgba(0,0,0, .5);
-
-    position: absolute;
 }
