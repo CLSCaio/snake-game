@@ -182,7 +182,7 @@ main {
     align-items: flex-start;
     justify-content: center;
     gap: 5px;
-    opacity: 1;
+    opacity: 0;
 }
 
 #regra div {
