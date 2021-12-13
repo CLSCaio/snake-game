@@ -177,19 +177,24 @@ main {
 }
 
 #regra {
+    border: 2px solid skyblue;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 5px;
     opacity: 0;
+    transition: 1s;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 15px;
+    gap: 10px;
 }
 
 #regra div {
-    display: flex;
     width: 300px;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
 }
 
 #regra span {
